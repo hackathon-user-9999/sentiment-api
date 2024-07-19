@@ -1,5 +1,6 @@
 # syntax=docker/dockerfile:1.4
-FROM python:3.10-alpine AS builder
+FROM ubuntu
+RUN apt-get update && apt-get install -y python3.10 python3.10-dev
 
 ENV DEBIAN_FRONTEND noninteractive
 RUN apt-get update && \
